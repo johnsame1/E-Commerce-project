@@ -1,0 +1,109 @@
+.sectionfive {
+    max-width: 100%;
+    height: auto;
+    background-color: #705135;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionfive .container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    gap: 10px;
+    margin: 20px;
+}
+
+.sectionfive .container .containerdata {
+    max-width: 250px;
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #9e806566;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #0000001a;
+    color: #fff;
+    padding: 20px;
+
+}
+
+.sectionfive .container .containerdata .data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionfive .container .containerdata .data img {
+    width: 50px;
+    align-items: center;
+}
+
+@media screen and (min-width: 320px) {
+    .sectionfive {
+        max-width: 768px;
+    }
+
+    .sectionfive .container {
+        max-width: 80%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        gap: 20px;
+
+    }
+
+    .sectionfive .container .containerdata {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+    .sectionfive {
+        max-width: 1024px;
+    }
+    .sectionfive .container {
+        max-width: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 20px;
+
+    }
+    .sectionfive .container .containerdata {
+        max-width: 100%;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .sectionfive {
+        max-width: 2560px;
+    }
+    .sectionfive .container {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: space-between;
+
+    }
+    .sectionfive .container .containerdata {
+        max-width: 250px;
+        height: 400px;
+    }
+    
+}

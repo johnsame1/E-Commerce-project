@@ -1,0 +1,95 @@
+.Footer{
+    /* margin-top: 10rem; */
+    height: 62vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.back-img{
+     background-image: url(Img/Footer.jpeg);
+     background-size: cover;
+     background-repeat: no-repeat;
+     /* background-size: cover; */
+     object-fit: cover;
+     width: 100%;
+     height: 62vh;
+     position: relative;
+}
+.content-back{
+    position: absolute;
+    /* top: 50%;
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    text-align: center;
+    color: white;
+    z-index: 2; 
+}
+.flex-rows{
+    display: flex;
+    justify-content: space-around;
+    margin: 5rem;
+    gap :5rem
+
+}
+.col-left{
+    width: 40%;
+}
+.tit-col-left h2{
+    color: rgb(255, 166, 0);
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    margin-left: 2rem;
+}
+.lorem{
+    
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    
+    align-self: flex-start;
+}
+.icons{
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    
+}
+.face-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: orange;
+    display: flex ;
+   align-items: center;
+   justify-content: center;
+}
+.icons :hover{
+    background-color: rgb(117, 101, 6);
+    transition: 2s;
+    cursor: pointer;
+}
+.icon{
+font-size: 1.5rem;
+}
+.Support{
+    width: 30%;
+
+}
+.Support-list h4{
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    /* margin-left: 1rem; */
+}
+.Support-list p{
+opacity: 50% ;
+display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+;}

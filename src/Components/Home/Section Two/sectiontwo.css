@@ -1,0 +1,152 @@
+.sectiontwo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    overflow: hidden;
+}
+.sectiontwo .container{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align:left;
+    }
+    
+.sectiontwo .container h1{
+    font-weight: bold;
+    padding-left: 20px;
+    
+}
+.sectiontwo .container .buttons{
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    align-items: center;
+}
+.sectiontwo .container .buttons .link{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media screen and (min-width:320px){
+    .sectiontwo{
+        max-width:433px ;
+        margin: 0;
+    }
+  .sectiontwo .container{
+    width: 95%;
+    justify-content: center;
+    margin: 20px;
+    
+  }
+    .sectiontwo .container h1{
+        font-size: 24px;
+        font-weight: 900;
+    }
+    .sectiontwo .container .buttons{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
+        padding: 0;
+    }
+    .sectiontwo .container .buttons button{
+        width: 120px;
+        height: 120px;
+    }
+}
+@media screen and (min-width:434px){
+    .sectiontwo{
+        max-width:764px ;
+        margin: 0;
+    }
+    .sectiontwo .container{
+        width: 95%;
+        justify-content: center;
+        margin: 20px;
+    }
+    .sectiontwo .container h1{
+        font-size: 24px;
+        font-weight: 900;
+    }
+    .sectiontwo .container .buttons{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .sectiontwo .container .buttons button{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (min-width:765px){
+    .sectiontwo{
+        max-width:1024px ;
+        margin: 0;
+    }
+    .sectiontwo .container{
+        width: 90%;
+        justify-content: center;
+        margin: 40px;
+      }
+      .sectiontwo .container h1{
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .sectiontwo .container .buttons{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        justify-items: center;
+        align-items: center;
+    }
+    .sectiontwo .container .buttons button{
+        width: 120px;
+        height: 120px;
+    }
+}
+
+
+@media screen and(min-width:770px){
+    .sectiontwo{
+        max-width:1024px ;
+    }
+    .sectiontwo .container{
+        width: 95%;
+        justify-content: center;
+        
+      }
+    .sectiontwo .container h1{
+        font-size: 32px;
+        font-weight: bold;
+    }
+    
+}
+
+@media screen and (min-width:1025px){
+    .sectiontwo{
+        max-width:2560px ;
+        
+    }
+    .sectiontwo .container{
+        width: 95%;
+    }
+    .sectiontwo .container h1{
+        font-size: 36px;
+        font-weight: bold;
+    }
+}
+

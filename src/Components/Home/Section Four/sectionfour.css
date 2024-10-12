@@ -1,0 +1,106 @@
+.sectionfour{
+    max-width: 100%;
+    display: flex;
+}
+.sectionfour .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sectionfour .container .data{
+  width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px;
+
+}
+.sectionfour .container .data button{
+    color: var(--orange);
+}
+.sectionfour .container .products{
+    width: 85%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow:auto;
+    scrollbar-width: none;
+}
+
+.sectionfour .container .products .card{
+    width: 250px;
+    height: 230px;
+    border: 1px solid var(--lightGray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 10px;
+
+}
+
+.sectionfour .container .products .card img{
+width: 200px;
+height: 100px;
+}
+.sectionfour .container .products .card .card-data h4{
+    color: var(--orange);
+}
+
+
+
+@media screen and (min-width:320px) {
+    .sectionfour{
+       max-width: 767px;
+    }   
+    .sectionfour .container .products .card{
+       width: 180px;
+       height: 230px;
+    }
+    .sectionfour .container .products .card img{
+       width: 150px;
+       height: 100px;
+       }
+   }
+@media screen and (min-width:768px) {
+    .sectionfour{
+        max-width: 1024px;
+    }
+    .sectionfour .container{
+        max-width: 1024px;
+    }
+    .sectionfour .container .products{
+        width: 85%;
+    }
+    .sectionfour .container .products .card{
+        width: 250px;
+        height: 230px;
+     }
+     .sectionfour .container .products .card img{
+        width: 200px;
+        height: 100px;
+        }
+}
+
+@media screen and (min-width:1025px){
+    .sectionfour{
+        max-width:2560px
+    }
+    .sectionfour .container{
+        max-width:2560px
+    }
+    .sectionfour .container .products .card{
+        width: 250px;
+        height: 230px;
+     }
+     .sectionfour .container .products .card img{
+        width: 200px;
+        height: 100px;
+        }
+}

@@ -1,0 +1,85 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --lightBrown: #b5a898;
+  --gray: #4d4d4d;
+  --lightGray: #b7b7b7;
+  --orange: #ff830f;
+  --lightOrange: #ffa662;
+  --lightOrange: #fff2e6;
+  --darkBrown: #6f5137;
+
+  --fs-1: 2rem;
+  --fs-1B: 2rem bold;
+  --fs-2: 1.5rem;
+  --fs-2B: 1.5rem bold;
+  --fs-3: 1rem;
+  --fs-3B: 1rem bold;
+  --fs-4: 0.75rem;
+  --fs-4B: 0.75rem bold;
+  --fs-5: 0.5rem;
+  --fs-5B: 0.5rem bold;
+
+--br-circle:50%;
+--br-square:100%;
+--br-assycircle:10rem 45rem 14rem 16rem;
+
+--sectionSpce:20rem;
+
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --transition-3: 0.75s ease;
+  --transition-4: 1s ease;
+}
+
+::before,
+::after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+li {
+  list-style: none;
+}
+a,
+img,
+span,
+button,
+ion-icon {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+input,
+button,
+textarea {
+  background: none;
+  border: none;
+  font: inherit;
+}
+button {
+  cursor: pointer;
+}
+
+html {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
