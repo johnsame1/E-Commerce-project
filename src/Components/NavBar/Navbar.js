@@ -6,6 +6,7 @@ import img5 from '../../images/user (1).png';
 import './navbar.css'
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -17,7 +18,7 @@ function Navbar() {
             <nav>
                 <div className="navbar">
                     <div className="container_logo">
-                        <span>egybusiness.ae</span>
+                        <Link to={'/'}><span>egybusiness.ae</span></Link>
                         <div className="container">
                             <div className="data">
                                 <img src={img1} alt='menu' />
