@@ -1,0 +1,108 @@
+
+.dashboard {
+    /* padding: 20px;
+    border-radius: 8px;
+    padding-right: 50px; */
+    background-color: #fff;
+    background-color: #fff;
+    background-color: #fff;
+    margin: auto;
+    
+    width: 80%;
+    /* width: 80%; */
+    /* border: 3px solid green; */
+    padding: 10px;
+  }
+  
+   .tabs {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .tabs h2 {
+    font-size: 22px;
+    color: #aaa;
+    margin-right: 40px;
+    cursor: pointer;
+  }
+  
+  .tabs h2.active-tab {
+    color: #222;
+    font-weight: bold;
+  }
+  
+   .product-details {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .product-details tr td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eaeaea;
+    color: #444;
+  }
+  
+  .product-details tr td:first-child {
+    font-weight: bold;
+    color: #222;
+    /* width: 30%; */
+  }
+  
+   .tags {
+    margin-top: 20px;
+  }
+  
+  .tags h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .tag {
+    background-color: #ffefdc;
+    padding: 6px 12px;
+    margin: 4px;
+    border-radius: 5px;
+    color: #ff8c00;
+    font-size: 14px;
+  }
+  
+   @media (max-width: 768px) {
+    .tabs {
+      flex-direction: column;
+    }
+  
+    .tabs h2 {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+  
+    .product-details tr td {
+      display: block;
+      padding: 10px;
+    }
+  
+    .product-details tr td:first-child {
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 5px;
+    }
+  
+    .tag-list {
+      justify-content: center;
+    }
+  
+    .tag {
+      padding: 5px 10px;
+      font-size: 13px;
+    }
+  }
+  
