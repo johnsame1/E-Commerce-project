@@ -1,6 +1,6 @@
-import ProductPage from '../Components/ProductPage/ProductPage';
-import Dashboard from '../Components/Dashboard/Dashboard';
-import ProductGrid from '../Components/ProductGrid/ProductGrid';
+import ProductPage from '../Components/cart/ProductPage/ProductPage.jsx';
+import Dashboard from '../Components/cart/Dashboard/Dashboard.js';
+import ProductGrid from '../Components/cart/ProductGrid/ProductGrid.jsx';
   
  
 

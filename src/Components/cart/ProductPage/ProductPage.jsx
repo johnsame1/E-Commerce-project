@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Picture1 from "../../assets/2024-09-13T21-19-06.411Zimage (2)777 (1).webp";
-import Picture2 from "../../assets/2024-09-13T21-19-06.411Zimage (2)777 (1).webp";
-import Picture3 from "../../assets/2024-09-13T21-19-06.411Zimage (2)777 (1).webp";
-import Picture4 from "../../assets/2024-09-13T21-19-06.411Zimage (2)777 (1).webp";
+import Picture1 from "../../../assets/2024-09-13T21-19-06.411Zimage (2)777 (1).webp";
+import Picture2 from "../../../assets/2024-09-13T21-19-06.411Zimage (2)777 (1).webp";
+import Picture3 from "../../../assets/2024-09-13T21-19-06.411Zimage (2)777 (1).webp";
+import Picture4 from "../../../assets/2024-09-13T21-19-06.411Zimage (2)777 (1).webp";
 import "./ProductPage.css";
 
 const ProductPage = () => {

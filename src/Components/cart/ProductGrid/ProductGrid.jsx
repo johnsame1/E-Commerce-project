@@ -1,5 +1,5 @@
 import React from 'react';
-import Picture1 from "../../assets/2024-09-13T21-19-06.411Zimage (2)777 (1).webp";
+import Picture1 from "../../../assets/2024-09-13T21-19-06.411Zimage (2)777 (1).webp";
  
 import './ProductGrid.css';
 
