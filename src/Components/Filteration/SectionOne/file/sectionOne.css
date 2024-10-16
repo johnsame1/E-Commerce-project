@@ -2,7 +2,7 @@
   width: 100%;
   margin-top: 1rem;
   position: relative;
-  height: 75vh;
+  height: 65vh;
 }
 
 .SectionOne .container {
@@ -14,26 +14,29 @@
   background-size: cover;
   background-position: center;
   height: 280px;
+  max-width: 100%;
   align-items: center;
   color: white;
   padding: 40px;
 }
 
 .SectionOne .container .overlay {
-  padding: 30px;
+  display: grid;
+  justify-content: center;
+  font-size: 20px;
 }
 .SectionOne .container .overlay .food {
-  color: var(--white);
-  font-weight: bold;
+  display: grid;
 }
 .SectionOne .container .overlay p {
   color: gray;
+  font-size: 25px;
 }
 
 .SectionOne .product {
   width: 100%;
   position: relative;
-  top: 25rem;
+  top: 27rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -48,7 +51,6 @@
 }
 .SectionOne .product .container .Top_categories {
   color: var(--white);
-  padding-left: 10rem;
   font-size: 3rem;
   font-style: bold;
 }
@@ -61,7 +63,7 @@
   scrollbar-width: none;
 }
 
-.SectionOne .product .container .lists .singleProduct {
+.SectionOne .product .container .lists li {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -73,10 +75,6 @@
 
 .SectionOne .product .container .lists img {
   width: 200px;
-  padding: 10px;
-}
-.SectionOne .product .container .lists .pasta {
-  margin-left: 3rem;
 }
 
 .SectionOne .photo {
@@ -84,13 +82,8 @@
   flex-direction: column;
   align-items: center;
 }
-.photo{
-  position: relative;
-  height: 70vh;
-}
 
 .photo .container {
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -109,217 +102,35 @@
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
 }
 .photo .container .bg .overlay {
-padding: 5rem;
+  padding: 5rem;
 }
-.photo .container .bg .overlay .explore{
-color: var(--white);
-background-color: var(--orange);
-padding: 5    px;
-border-radius:20px ;
-width: 200px;
-}
-@media (min-width: 870px) and (max-width: 996px) {
-  .SectionOne .container .banner {
-    width: 112%;
-  }
-  .SectionOne .product .container {
-    width: 85%;
-    position: absolute;
-    right: 3px;
-    bottom: 5rem;
-  }
-  .photo .container .bg {
-    width: 100%;
-    margin-left: 28rem;
-  }
-}
-@media (min-width: 800px) and (max-width: 870px) {
-  .SectionOne .container .banner {
-    width: 125%;
-  }
-  .SectionOne .product .container {
-    width: 85%;
-    position: absolute;
-    left: 180px;
-    bottom: 5rem;
-  }
-  .photo .container .bg {
-    width: 100%;
-    margin-left: 35rem;
-    height: 40VH;
-
-  }
-}
-@media (min-width: 700px) and (max-width: 807px) {
-  .SectionOne .container .banner {
-    width: 160%;
-  }
-  .SectionOne .product .container {
-    width: 85%;
-    position: absolute;
-    left: 300px;
-    bottom: 5rem;
-  }
-  .photo .container .bg {
-    width: 105%;
-    margin-left: 60rem;
-    height: 40VH;
-  }
-}
-@media (min-width: 630px) and (max-width: 700px) {
-  .SectionOne .container .banner {
-    width: 150%;
-  }
-  .SectionOne .product .container {
-    width: 85%;
-    position: absolute;
-    left: 200px;
-    bottom: 5rem;
-  }
-  .photo .container .bg {
-    width: 102%;
-    margin-left: 40rem;
-    height: 40VH;
-
-  }
-}
-@media (min-width: 576px) and (max-width: 630px) {
-  .SectionOne .container .banner {
-    width: 170%;
-  }
-  .SectionOne .product .container {
-    width: 85%;
-    position: absolute;
-    left: 280px;
-    bottom: 6rem;
-  }
-  .photo .container  {
-    width: 120%;
-    margin-left: 30rem;
-  }
-  .photo .container .bg {
-    width: 100%;
-    height: 55VH;
-
-  }
- 
-}
-@media (min-width: 470px) and (max-width: 576px) {
-  .SectionOne .container .banner {
-    width: 250%;
-  }
-  .SectionOne .product .container {
-    width: 85%;
-    position: absolute;
-    left: 310px;
-    bottom: 7rem;
-  }
-  .photo .container {
-    width: 85%;
-    margin-left: 51rem;
-
-  }
-  .photo .container .bg{
-    width: 85%;
-    margin-left: 55rem;
-    height: 40VH;
-
-  }
-}
-@media (min-width: 300px) and (max-width: 470px) {
-  .SectionOne .container .banner {
-    width: 320%;
-  }
-  .SectionOne .product .container {
-    width: 180%;
-    position: absolute;
-    left: 300px;
-    bottom: 0rem;
-  }
-  .SectionOne .product .container .lists .singleProduct {
-    width: 100%;
-    margin-bottom: 1rem;
-  }
-  .photo   {
-    height: 90vh;
-    
-  }
-  .photo .container  {
-    margin-left: 46rem;
-        margin-top: 40px;
-
-  }
-  .photo .container .bg  {
-width: 500px;
-height: 80VH;
-
-}
-}
-@media (min-width: 440px) and (max-width: 576px) {
-  .SectionOne .container .banner {
-    height: 340px;
-    margin-bottom: 5rem;
-  }
-  .SectionOne .container {
-    margin-top: 10rem;
-  }
-
-  .SectionOne .product .container {
-    width: 90%;
-    padding: 0.5rem;
-    position: absolute;
-    left: 510px;
-    bottom: 13rem;
-
-  }
-
-  .SectionOne .product .container .Top_categories {
-    padding-left: 1rem;
-    font-size: 2rem;
-  }
-  .SectionOne .product .container .lists img {
-    width: 80px;
-  }
-  .photo .container .bg  {
-    width: 450px;
-    height: 60VH;
-    margin-left: 50px;
-    }
+.photo .container .bg .overlay .explore {
+  color: var(--white);
+  background-color: var(--orange);
+  padding: 5 px;
+  border-radius: 20px;
+  width: 200px;
 }
 
-@media (min-width: 577px) and (max-width: 992px) {
-  .SectionOne .container .banner {
-    height: 290px;
-    padding: 34px;
+@media (min-width: 1000px) and (max-width: 1424px) {
+  .SectionOne {
+    height: 80vh;
   }
   .SectionOne .product .container .Top_categories {
-    padding-left: 2rem;
-    font-size: 2.5rem;
-  }
-
-  .SectionOne .product .container .lists .singleProduct {
-    width: 45%;
-    margin-bottom: 1rem;
-  }
-
-  .SectionOne .product .container .lists img {
-    width: 90px;
-  }
-
-  .photo .container {
-    width: 85%;
+    font-size: 25px;
   }
 }
 
-@media (min-width: 993px) {
-  .SectionOne .container .banner {
-    height: 280px;
-    padding: 40px;
+@media (min-width: 993px) and (max-width: 1000px) {
+  .SectionOne {
+    height: 85vh;
   }
 
   .SectionOne .product .container {
     width: 85%;
     bottom: 0rem;
+  }
+  .SectionOne .container .banner .overlay {
   }
 
   .SectionOne .product .container .Top_categories {
@@ -334,6 +145,78 @@ height: 80VH;
     width: 85%;
   }
   .photo .offer {
-    margin-right:  100px ;
+    margin-right: 100px;
+  }
+}
+
+@media (min-width: 766px) and (max-width: 993) {
+  .SectionOne .container .banner {
+    max-width: 100%;
+  }
+
+  .photo .container .bg {
+    max-width: 100%;
+    height: 40vh;
+  }
+  .photo .container .bg .overlay .text {
+    font-size: 30px;
+  }
+  .photo .container .bg .overlay .text {
+    max-width: 100%;
+  }
+}
+@media (min-width: 425px) and (max-width: 768px) {
+  .SectionOne {
+    height: 85vh;
+  }
+  .SectionOne .container .banner {
+    max-width: 100%;
+  }
+  .SectionOne .product .container {
+    width: 85%;
+    position: absolute;
+    bottom: 12px;
+  }
+  .SectionOne .product .container .lists img {
+    width: 150px;
+  }
+  .photo .container .bg {
+    max-width: 100%;
+  }
+  .SectionOne .product .container .Top_categories {
+    font-size: 25px;
+  }
+
+  .photo .container .bg .overlay .text {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 425px) {
+  .SectionOne {
+    height: 75vh;
+  }
+
+  .SectionOne .container .banner {
+    max-width: 100%;
+  }
+  .SectionOne .product .container {
+    max-width: 100%;
+  }
+
+  .SectionOne .product .container .lists li img {
+    width: 150px;
+  }
+  .SectionOne .product .container .Top_categories {
+    font-size: 25px;
+  }
+  .photo .container {
+    margin-top: 40px;
+  }
+  .photo .container .bg {
+    max-width: 100%;
+  }
+  .photo .container .bg .overlay .text {
+    font-size: 18px;
   }
 }

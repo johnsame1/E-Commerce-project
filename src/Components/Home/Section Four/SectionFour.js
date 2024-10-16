@@ -25,7 +25,7 @@ function SectionFour() {
         <div className="container">
           <div className="data">
             <h2>Best Seller</h2>
-            <Link to={"/filteration"}>
+            <Link to={"/filteration/BestSeller"}>
               <button>
                 See All <FaLongArrowAltRight />
               </button>
@@ -54,7 +54,7 @@ function SectionFour() {
         <div className="container">
           <div className="data">
             <h2>On Sale</h2>
-            <Link to={"/filteration"}>
+            <Link to={"/filteration/FrechSeller"}>
               <button>
                 See All <FaLongArrowAltRight />
               </button>
@@ -83,7 +83,7 @@ function SectionFour() {
         <div className="container">
           <div className="data">
             <h2>NEW Arrived</h2>
-            <Link to={"/filteration"}>
+            <Link to={"/filteration/New"}>
               <button>
                 See All <FaLongArrowAltRight />
               </button>

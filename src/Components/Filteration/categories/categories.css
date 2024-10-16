@@ -1,12 +1,13 @@
 .category {
   display: flex;
   width: 100%;
+  justify-content: center;
 }
 
 .category .containers {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 80%;
 }
 
 .category .containers .NewCategory {
@@ -18,39 +19,63 @@
 .category .containers .row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 5px;
+  width: 100%;
+  gap: 20px;
+  justify-content: center;
 }
 .category .containers .row .collection {
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 24%;
   margin-bottom: 20px;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding: 10px;
 }
 
+@media  (min-width: 992px) {
+
+
+
+  .category .containers {
+    max-width: 100%; 
+  }
+  
+  .category .containers .row .collection {
+    width: 24%;
+  }
+}
+
+
+
+
 @media (min-width:576px) and (max-width: 992px) {
     .category .containers {
-      width: 80%; 
-      margin-left: 50rem;
+      max-width: 80%; 
     }
     
     .category .containers .row .collection {
-      width: 45%;
+      width: 48%;
     }
-  }
+    .category .containers .row .collection img {
+    
+      width: 270px;
+    }
+    
+    
+    }
   
   
   @media (min-width:300px) and (max-width: 576px) {
     .category .containers {
-      width: 100%; 
-      margin-left: 100rem;
+      width:  100%; 
 
     }
   
-    .category .containers .row .collection {
+    .category .containers .row{
       width: 100%;
+    }
+    .category .containers .row .collection {
+      width: 40%;
     }
   }

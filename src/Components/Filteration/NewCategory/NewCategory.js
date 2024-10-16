@@ -1,14 +1,29 @@
 import React, { useEffect, useState } from "react";
-import productsData from "./data";
-
-import "./categories.css";
-function ProductList() {
+import image from "./product.jpg";
+import "../categories/categories.css";
+function NewCategory({ filter }) {
   const [products, setProducts] = useState([]);
   const [showAll, setShowAll] = useState(false);
-
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  
   useEffect(() => {
-    setProducts(productsData);
+    fetch("http://localhost:3000/products")
+      .then((response) => response.json())
+      .then((data) => {setProducts(data)
+        ;setFilteredProducts(data, filter);});
   }, []);
+
+  const filterProducts = (products, filter) => {
+    if (filter === "All") {
+      setFilteredProducts(products);
+    } else {
+      setFilteredProducts(products.filter((product) => product.category === filter));
+    }
+  };
+  useEffect(() => {
+    filterProducts(products, filter);
+  }, [filter, products]);
+
 
   const show = () => {
     setShowAll(!showAll);
@@ -19,16 +34,17 @@ function ProductList() {
       <div className="containers">
         <div className="NewCategory">
           <h1 className=""> New </h1>
-          <button onClick={show} >
+          <button onClick={show}>
             {showAll ? "Show Less" : "Show All Products"}
           </button>
         </div>
         <div className="row">
-          {products.slice(0, showAll ? products.length : 6).map((product) => (
+          {filteredProducts.slice(0, showAll ? filteredProducts.length : 6)
+          .map((product) => (
             <div key={product.id} className="collection">
-              <img src={product.image} alt={product.name} />
+              <img src={image} alt={product.name} />
               <h3>{product.name}</h3>
-              <p>{product.price}</p>
+              <p>{product.category}</p>
             </div>
           ))}
         </div>
@@ -37,4 +53,4 @@ function ProductList() {
   );
 }
 
-export default ProductList;
+export default NewCategory;
