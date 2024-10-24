@@ -1,4 +1,4 @@
- .product-page {
+.product-page {
   display: flex;
   justify-content: space-between;
   padding: 90px;
@@ -105,7 +105,7 @@
   gap: 20px;
 }
 
-.add-to-cart, .add-to-favorite {
+.add-to-cart, .add-to-favorite, .view-cart {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -126,6 +126,12 @@
   color: #ff8c00;
 }
 .add-to-favorite:hover{
+  background-color: #ff8c00;
+  color: white;
+  transition: 0.3s;
+
+}
+.view-cart:hover{
   background-color: #ff8c00;
   color: white;
   transition: 0.3s;
@@ -157,5 +163,49 @@
   .quantity-button {
     padding: 5px 8px;
     font-size: 14px;
+  }
+  .thumbnail{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .gallery-thumbnails {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 20px;
+  }
+
+} 
+
+@media (min-width: 320px) and (max-width:425px) 
+  
+ {
+
+ *{
+  background-color: white;
+  width: 100%;
+  align-items: center;
+  margin: auto;
+ }
+  .product-main .main-image {
+
+
+    object-fit: cover;
+    border-radius: 8px;
+    /* margin-right: 40px; */
+    /* width: 100%; */
+    align-items: center;
+    margin: auto;
+  }
+  .quantity-controls{
+    padding-bottom: 10px;
+  }
+  .add-to-cart, .add-to-favorite{
+    padding: 10px 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .218);
+    font-size: 16px;
+    cursor: pointer;
   }
 }

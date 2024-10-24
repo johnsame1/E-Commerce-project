@@ -5,8 +5,10 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <div className="tabs">
-        <h2 className="active-tab">Details Product</h2>
-        <h2>Customer Reviews</h2>
+      
+        <tr>Details Product</tr>
+        <td>Customer Reviews</td>
+        
       </div>
       <table className="product-details">
         <tbody>
