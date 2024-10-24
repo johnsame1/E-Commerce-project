@@ -9,6 +9,7 @@ import Cart from './Pages/Cart'
 
 import './App.css';
 import Navbar from './Components/NavBar/Navbar';
+import ViewCart from './Pages/ViewCart';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
         <Route path='/filteration/FrechSeller' element ={<OnSale/>}/>
         <Route path='/filteration/BestSeller' element ={<FreshSale/>}/>
 
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/Cart" element={<Cart />} />
+        <Route path="/Viewcart" element={<ViewCart />} />
       </Routes>
       
     </Router>
