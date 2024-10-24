@@ -136,7 +136,7 @@
     }
   
     .controllers{
-      /* align-items: center; */
+      /* align-: center; */
       display: flex;
       justify-content: flex-start;
 
