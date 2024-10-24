@@ -6,16 +6,15 @@ import {
   faLinkedinIn,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons"; // Correct icon imports
-
-import footer from "./Img/Footer.jpeg";
+import './Footer.css'
+import footer from "../../images/Footer.jpeg";
 
 function Footer() {
   return (
     <>
       <div className="Footer">
-        <div className="back-img" style={{ backgroundImage: `url(${footer})` }}>
-          <div className="content-back">
-            <div className="flex-rows">
+        <div className="back-img" >
+          
               <div className="col-left">
                 <div className="tit-col-left">
                   <h2>egybussniss.eg</h2>
@@ -27,13 +26,7 @@ function Footer() {
                   Tempora, repellat.
                 </p>
                 <div
-                  className="icons"
-                  style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    gap: "10px",
-                  }}
-                >
+                  className="icons">
                   <div className="face-icon">
                     <FontAwesomeIcon icon={faFacebookF} />
                   </div>
@@ -79,9 +72,7 @@ function Footer() {
                 </div>
               </div>
             </div>
-          </div>
         </div>
-      </div>
     </>
   );
 }
