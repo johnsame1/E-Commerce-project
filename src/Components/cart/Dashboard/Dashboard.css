@@ -1,6 +1,6 @@
 
 .dashboard {
-   
+    
   background-color: #fff;
 
   margin: auto;
@@ -8,7 +8,7 @@
   
 }
 
-  
+ 
  .dashboard .product-details {
   width: 100%;
   border-collapse: collapse;
@@ -45,39 +45,45 @@
 .dashboard .product-details tr td:first-child {
   font-weight: bold;
   color: #222;
-  /* width: 30%; */
-}
+ }
 
- .tags {
+ /* .tag {
   margin-top: 20px;
-}
+} */
 
-.tags h4 {
+
+
+
+/* .tags h4 {
   margin-bottom: 10px;
   font-size: 18px;
-}
+} */
 
-.tag-list {
+/* .tag-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-}
+} */
 
-.tag {
+.dashboard .product-details .tags{
+  display: flex;
+}
+.dashboard .product-details .tag {
   background-color: #ffefdc;
   padding: 6px 12px;
   margin: 4px;
   border-radius: 5px;
   color: #ff8c00;
   font-size: 14px;
+  /* display: flex !important; */
 }
 
  @media (max-width: 768px) {
-  .tabs {
+  .dashboard .tabs {
     flex-direction: column;
   }
 
-  .tabs h2 {
+  .tabs {
     margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
