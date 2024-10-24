@@ -1,19 +1,25 @@
 import { useState, useEffect } from "react";
 import "./sectionOne.css";
 import image from "../assyts/img/bag.png";
+import axiosInstance from "../../../axios/Axios"; // Import the axios instance with default config
 
 function SectionOne({ setFilter }) {
-  const categoryApiUrl = "http://localhost:3000/categories";
   const [categories, setCategories] = useState([]);
 
-  const getCategories = () => {
-    fetch(categoryApiUrl)
-      .then((res) => res.json())
-      .then((data) => setCategories(data));
+  const getCategories = async () => {
+    try {
+      const { data } = await axiosInstance.get("/category"); // No need to specify full URL
+      setCategories(data.data.categories);
+       // Set the categories state with the fetched data
+       console.log(data.data.categories); 
+      console.log( categories );
+    } catch (err) {
+      console.error("Error fetching categories", err);
+    }
   };
 
   useEffect(() => {
-    getCategories();
+    getCategories(); // Fetch categories when the component mounts
   }, []);
 
   return (
@@ -39,7 +45,7 @@ function SectionOne({ setFilter }) {
               {categories.map((category) => (
                 <li key={category.id}>
                   <button onClick={() => setFilter(category.name)}>
-                    <img src={ image} alt={category.name} />
+                    <img src={image} alt={category.name} />
                     <h3>{category.name}</h3>
                   </button>
                 </li>
