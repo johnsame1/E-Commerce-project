@@ -12,7 +12,7 @@
   display: flex;
   justify-content:space-between ;
 }
-h2 {
+.product-grid .product-title h2 {
   font-size: 24px;
   margin-bottom: 20px;
   font-weight: 700;
@@ -49,11 +49,11 @@ h2 {
   margin-bottom: 10px;
 }
 
-h3 {
+.product-card h3 {
   font-size: 18px;
  }
 
-p {
+.product-card p {
   font-size: 14px;
  }
 
@@ -63,7 +63,7 @@ p {
   color: #333;
 }
 
- .see-all-link {
+ .product-grid .product-title .see-all-link {
   display: block;
    
   text-decoration: none;
@@ -101,7 +101,7 @@ p {
     align-items: center;
     margin: auto;
   }
-  h2{
+  .product-grid .product-title h2{
     font-size: 15px;
   }
   .product-grid{

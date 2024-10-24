@@ -1,62 +1,40 @@
 
 .dashboard {
-  /* padding: 20px;
-  border-radius: 8px;
-  padding-right: 50px; */
+   
   background-color: #fff;
 
   margin: auto;
   width: 80%;
-  /* width: 80%; */
-  /* border: 3px solid green; */
-  /* padding: 10px; */
+  
 }
 
- /* .tabs {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 20px;
-}
-
-.tabs h2 {
-  font-size: 22px;
-  color: #aaa;
-  margin-right: 40px;
-  cursor: pointer;
-  align-items: start;
-}
-
-.tabs h2.active-tab {
-  color: #222;
-  font-weight: bold;
-}
- */
- .product-details {
+  
+ .dashboard .product-details {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
 }
 
-.product-details tr td {
+.dashboard .product-details tr td {
   padding: 12px 15px;
   border-bottom: 1px solid #eaeaea;
   color: #444;
 }
-.tabs{
+.dashboard .tabs{
   display: flex;
   justify-content: space-between;
   width: 40%;
   margin-bottom: 20px;
 
 }
-.tabs tr {
+.dashboard .tabs tr {
 
   font-size: 22px;
   color: #222;
   font-weight: bold;
 
 }
-.tabs td{
+.dashboard .tabs td{
 
   font-size: 22px;
   color: #aaa;
@@ -64,7 +42,7 @@
   cursor: pointer;
   align-items: start;
 }
-.product-details tr td:first-child {
+.dashboard .product-details tr td:first-child {
   font-weight: bold;
   color: #222;
   /* width: 30%; */
