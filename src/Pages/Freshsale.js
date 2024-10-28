@@ -1,15 +1,17 @@
-import SectionOne from '../Components/Filteration/SectionOne/file/SectionOne';
-import FreshSale from '../Components/Filteration/FreshSale/FreshSale';
+import Components from '../Components/Filteration/SectionOne/file/Components';
+import BestSeler from '../Components/Filteration/FreshSale/BestSeller';
+import { useState } from 'react';
 
 
-function Freshsale(){
+function BestSeller(){
+    const [filter , setFilter] = useState("All")
     return (
         <div>
-            <SectionOne />
-            <FreshSale />
+            <Components />
+            <BestSeler filter={filter} />
         </div>
     );
 }
 
 
-export default Freshsale;
+export default BestSeller;

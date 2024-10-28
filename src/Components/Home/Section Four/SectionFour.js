@@ -83,7 +83,7 @@ function SectionFour() {
         <div className="container">
           <div className="data">
             <h2>NEW Arrived</h2>
-            <Link to={"/filteration/New"}>
+            <Link to={"/filteration/NewSeller"}>
               <button>
                 See All <FaLongArrowAltRight />
               </button>

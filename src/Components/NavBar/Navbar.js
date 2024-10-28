@@ -62,11 +62,11 @@ function Navbar() {
                         <ul>
                             <li><div className="login">
                                 <img src={img5} alt='user' />
-                                <button>Log in</button>
+                                <button> <Link to={'/login'}>Login</Link> </button>
                             </div></li>
                             <li><div className="signin">
                                 <img src={img5} alt='user' />
-                                <button>Sign Up</button>
+                                <button> <Link to={'/sign'}>Login</Link> </button>
                             </div></li>
                         </ul>
                     </div>

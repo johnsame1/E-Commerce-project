@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
 import "./sectionOne.css";
 import image from "../assyts/img/bag.png";
-import axiosInstance from "../../../axios/Axios"; // Import the axios instance with default config
+import axiosInstance from "../../../axios/Axios"; 
+import { Link } from "react-router-dom";
 
 function SectionOne({ setFilter }) {
   const [categories, setCategories] = useState([]);
 
   const getCategories = async () => {
     try {
-      const { data } = await axiosInstance.get("/category"); // No need to specify full URL
+      const { data } = await axiosInstance.get("/category"); 
       setCategories(data.data.categories);
-       // Set the categories state with the fetched data
        console.log(data.data.categories); 
       console.log( categories );
     } catch (err) {
@@ -19,7 +19,7 @@ function SectionOne({ setFilter }) {
   };
 
   useEffect(() => {
-    getCategories(); // Fetch categories when the component mounts
+    getCategories(); 
   }, []);
 
   return (
@@ -63,8 +63,7 @@ function SectionOne({ setFilter }) {
               <h1 className="text">
                 Get a 30% discount on your order when you order more than 5 kilos
               </h1>
-              <button className="explore">Explore Now</button>
-            </div>
+<button>              <Link to={"/filteration"} className="explore">Explore Now</Link></button>            </div>
           </div>
         </div>
       </div>

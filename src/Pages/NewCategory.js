@@ -1,12 +1,15 @@
-import SectionOne from '../Components/Filteration/SectionOne/file/SectionOne';
+import Components from '../Components/Filteration/SectionOne/file/Components';
 import Newcategory from '../Components/Filteration/NewCategory/NewCategory';
+import { useState } from 'react';
 
 
 function NewCategory(){
+    const [filter , setFilter] = useState("All")
+
     return (
         <div>
-            <SectionOne />
-            <Newcategory />
+            <Components />
+            <Newcategory  filter={filter} />
         </div>
     );
 }

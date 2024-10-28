@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
-import real from './Img/real-img.jpg';
+import real from '../../images/real-img.jpg';
 import './Sign.css';
 import { Link } from "react-router-dom";
 

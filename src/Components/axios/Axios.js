@@ -9,5 +9,4 @@ const axiosInstance = axios.create({
     Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGM4ZDNhZTQ0YmQ1YjAzZTFmNzFjYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyOTc2Njg5MX0.SSXQMQM0vdzDnr2f7M7EtIRuEhNbfdLRMh2Sux37N5U`
   }
 });
-
 export default axiosInstance;
