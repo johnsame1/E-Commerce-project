@@ -1,15 +1,17 @@
-import SectionOne from '../Components/Filteration/SectionOne/file/SectionOne';
-import ProductList from '../Components/Filteration/categories/Categories';
+import Components from '../Components/Filteration/SectionOne/file/Components';
+import ProductList from '../Components/Filteration/categories/OnSale';
+import { useState } from 'react';
 
 
-function onSale(){
+function OnSale(){
+const [filter,setFilter] = useState("All")
     return (
         <div>
-            <SectionOne />
-            <ProductList />
+            <Components />
+            <ProductList filter={filter}/>
         </div>
     );
 }
 
 
-export default onSale;
+export default OnSale;

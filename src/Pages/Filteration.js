@@ -1,7 +1,7 @@
 import SectionOne from '../Components/Filteration/SectionOne/file/SectionOne';
-import ProductList from '../Components/Filteration/categories/Categories';
+import ProductList from '../Components/Filteration/categories/OnSale';
 import NewCategory from '../Components/Filteration/NewCategory/NewCategory';
-import FreshSale from '../Components/Filteration/FreshSale/FreshSale';
+import BestSeler from '../Components/Filteration/FreshSale/BestSeller';
 import { useState } from 'react';
 
 
@@ -14,7 +14,7 @@ function Filteration(){
             <SectionOne setFilter={setFilter} />
             <ProductList filter={filter}/>
             <NewCategory  filter={filter} />
-            <FreshSale filter={filter} />
+            <BestSeler filter={filter} />
         </div>
     );
 }

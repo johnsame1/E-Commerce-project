@@ -7,7 +7,6 @@ import {
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons"; // Correct icon imports
 import './Footer.css'
-import footer from "../../images/Footer.jpeg";
 
 function Footer() {
   return (
