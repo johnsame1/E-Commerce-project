@@ -40,7 +40,7 @@ function ProductPage({ addToCart }) {
             alt="Product Thumbnail 1"
           />
           <img className="thumbnail" src={Picture1} alt="Product Thumbnail 2" />
-          <img className="thumbnail" src={Picture1} alt="Product Thumbnail 3" />
+          <img className="thumbnail" src={Picture1} alt="Product 111 Thumbnail 3" />
         </div>
       </div>
 
