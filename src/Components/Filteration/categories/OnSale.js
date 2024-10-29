@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./categories.css";
-import image from './product.jpg';
 import axiosInstance from "../../axios/Axios"; 
+import { Link } from "react-router-dom";
 
 function ProductList({ filter }) {
   const [products, setProducts] = useState([]);
@@ -11,10 +11,14 @@ function ProductList({ filter }) {
 const getProducts = async()=>{
 
   try {
-    const {data} = await axiosInstance.get("/product?onSales=1");
+    const config ={ 
+      headers: {
+      Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGM4ZDNhZTQ0YmQ1YjAzZTFmNzFjYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTczMDIwMTI2Mn0.nLJWAgAA_bf8UzJopx0otMVQMLJZYAu5u1Fy7ALqA2o` 
+    }}
+    const {data} = await axiosInstance.get("/product?onSales=1",config);
     setProducts(data.data.products);
-    console.log('setProducts', data.data)
-  } catch (error) {
+    console.log('setProducts', data.data.products)
+  } catch (error) { 
     console.error("Error fetching products: ", error);
   }
 } 
@@ -46,14 +50,15 @@ const getProducts = async()=>{
     setShowAll(!showAll);
   };
 
+
   return (
     <div className="category">
       <div className="containers">
         <div className="NewCategory">
           <h1>On Sale</h1>
-          <button onClick={toggleShowAll}>
+          <Link to ={"/filteration/Onsale"} onClick={toggleShowAll}>
             {showAll ? "Show Less" : "Show All Products"}
-          </button>
+          </Link>
         </div>
         <div className="row">
           {filteredProducts.slice(0 , showAll ? filteredProducts.length:3).map((product) => (

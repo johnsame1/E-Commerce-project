@@ -9,10 +9,13 @@ function SectionOne({ setFilter }) {
 
   const getCategories = async () => {
     try {
-      const { data } = await axiosInstance.get("/category"); 
+      const config = { headers: {
+        Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGM4ZDNhZTQ0YmQ1YjAzZTFmNzFjYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyOTc2Njg5MX0.SSXQMQM0vdzDnr2f7M7EtIRuEhNbfdLRMh2Sux37N5U`
+      }}
+      const { data } = await axiosInstance.get("/category",config); 
       setCategories(data.data.categories);
        console.log(data.data.categories); 
-      console.log( categories );
+      console.log("cat", data.data.categories );
     } catch (err) {
       console.error("Error fetching categories", err);
     }
@@ -38,9 +41,9 @@ function SectionOne({ setFilter }) {
           <div className="container">
             <p className="Top_categories">Top Categories</p>
             <ul className="lists">
-              <li key="all">
+              <li key="all" onClick={() => setFilter("All")}>
                 <img src={image} alt="All Categories" />
-                <button onClick={() => setFilter("All")}>All</button>
+                <button >All</button>
               </li>
               {categories.map((category) => (
                 <li key={category.id}>
