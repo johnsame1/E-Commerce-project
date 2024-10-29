@@ -42,7 +42,7 @@ const Dashboard = () => {
           </tr>
           <tr>
             <td>Tags</td>
-            <td>
+            <td className="tags">
           <span className="tag">Bags</span>
           <span className="tag">Plastic</span>
           <span className="tag">Storage</span>
