@@ -6,6 +6,7 @@ import real from '../../images/real-img.jpg';
 import './Sign.css';
 import { Link, useNavigate } from "react-router-dom";
 import axiosInstance from '../axios/Axios.js';
+import { ChatState } from "../Context/ChatProvider.js";
 
 function Login() {
     const navigate = useNavigate();
@@ -34,7 +35,9 @@ function Login() {
             
             const { data } = await axiosInstance.post('/auth/login', newUser, config);
             // Store the token in local storage
-            localStorage.setItem("token", data.token);
+            
+            localStorage.setItem("userInfo", JSON.stringify(data.data));
+
             navigate("/");
         } catch (error) {
             setError('Login failed. Please check your credentials.');
@@ -43,7 +46,10 @@ function Login() {
     };
 
     return (
-        <div className="containerr">
+        <div className="section">
+
+       
+        <div className="container">
             <div className="banner_left">
                 <div className="title-banner_left">
                     <h2>Log in tomhbfj Your account</h2>
@@ -111,6 +117,7 @@ function Login() {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 }
