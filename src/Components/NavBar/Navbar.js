@@ -66,7 +66,7 @@ function Navbar() {
                             </div></li>
                             <li><div className="signin">
                                 <img src={img5} alt='user' />
-                                <button> <Link to={'/sign'}>Login</Link> </button>
+                                <button> <Link to={'/sign'}>Sign</Link> </button>
                             </div></li>
                         </ul>
                     </div>

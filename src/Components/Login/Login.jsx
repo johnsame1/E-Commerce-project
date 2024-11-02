@@ -1,15 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import real from '../../images/real-img.jpg';
 import './Sign.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axiosInstance from '../axios/Axios.js';
 
 function Login() {
-    console.log('losojs')
+    const navigate = useNavigate();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setError('');
+        
+        if (!email || !password) {
+            return setError('Please fill all fields');
+        }
+
+        const newUser = { email, password };
+        
+        try {
+            const config = {
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            };
+
+            // Log the request data in console (visible in dev tools)
+            
+            const { data } = await axiosInstance.post('/auth/login', newUser, config);
+            console.log('Sending data:', newUser);
+            console.log('Sending data:', data)
+            // Store the token in local storage
+            localStorage.setItem("token", data.token);
+            navigate("/");
+        } catch (error) {
+            setError('Login failed. Please check your credentials.');
+            console.log(error);
+        }
+    };
+
     return (
-        <div className="container">
+        <div className="containerr">
             <div className="banner_left">
                 <div className="title-banner_left">
                     <h2>Log in to Your account</h2>
@@ -21,7 +57,7 @@ function Login() {
                             <FontAwesomeIcon className='google-icon' icon={faGoogle} />
                             <h3>Google</h3>
                         </div>
-                        <div className="Google">
+                        <div className="Facebook">
                             <FontAwesomeIcon className='Facebook-icon' icon={faFacebook} />
                             <h3>Facebook</h3>
                         </div>
@@ -33,15 +69,28 @@ function Login() {
                         <span>Or</span>
                         <hr className="line" />
                     </div>
-                    <form className="login-form">
+                    <form className="login-form" onSubmit={handleSubmit}>
                         <div className="input-container">
-                            <FontAwesomeIcon icon={faEnvelope} />                            
-                            <input type="email" placeholder="Email" required />
+                            <FontAwesomeIcon icon={faEnvelope} />
+                            <input 
+                                type="email" 
+                                placeholder="Email" 
+                                required 
+                                value={email} 
+                                onChange={(e) => setEmail(e.target.value)} 
+                            />
                         </div>
                         <div className="input-container">
-                            <FontAwesomeIcon icon={faLock} />   
-                            <input type="password" placeholder="Password" required />      
+                            <FontAwesomeIcon icon={faLock} />
+                            <input 
+                                type="password" 
+                                placeholder="Password" 
+                                required 
+                                value={password} 
+                                onChange={(e) => setPassword(e.target.value)} 
+                            />
                         </div>
+                        {error && <div className="error-message">{error}</div>}
                         <div className="forgot-password">
                             <a href="/">Forgot your password?</a>
                         </div>
@@ -59,7 +108,7 @@ function Login() {
                         <h1>Welcome back</h1>
                         <p>Don't have an account?</p>
                         <button className="signup-button">
-                            <Link to="/">Sign Up</Link>
+                            <Link to="/">Sign U</Link>
                         </button>
                     </div>
                 </div>
