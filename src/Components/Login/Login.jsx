@@ -33,8 +33,6 @@ function Login() {
             // Log the request data in console (visible in dev tools)
             
             const { data } = await axiosInstance.post('/auth/login', newUser, config);
-            console.log('Sending data:', newUser);
-            console.log('Sending data:', data)
             // Store the token in local storage
             localStorage.setItem("token", data.token);
             navigate("/");
