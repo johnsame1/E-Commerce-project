@@ -41,7 +41,7 @@ function ProductPage({ addToCart }) {
 
    if (!product) return <p>Loading product details...</p>;
 
-  return (
+  return ( <>
     <div className="product-page">
       <div className="product-gallery">
         <div className="gallery-thumbnails">
@@ -95,6 +95,59 @@ function ProductPage({ addToCart }) {
         </div>
       </div>
     </div>
+    <div className="dashboard">
+    <div className="tabs">
+    
+      <tr>Details Product</tr>
+      <td>Customer Reviews</td>
+      
+    </div>
+    <table className="product-details">
+      <tbody>
+        <tr>
+          <td>Product Title</td>
+          <td>Plastic bag</td>
+        </tr>
+        <tr>
+          <td>Seller</td>
+          <td>Kevin Smile</td>
+        </tr>
+        <tr>
+          <td>Weight</td>
+          <td>24 g</td>
+        </tr>
+        <tr>
+          <td>Brand</td>
+          <td>Lorem Ibsem</td>
+        </tr>
+        <tr>
+          <td>Color</td>
+          <td>Gray</td>
+        </tr>
+        <tr>
+          <td>The Shape</td>
+          <td>Square</td>
+        </tr>
+        <tr>
+          <td>Special Features</td>
+          <td>WePress Inc.</td>
+        </tr>
+        <tr>
+          <td>Tags</td>
+          <td className="tags">
+        <span className="tag">Bags</span>
+        <span className="tag">Plastic</span>
+        <span className="tag">Storage</span>
+        <span className="tag">Biography</span>
+        <span className="tag">Trending2020</span>
+        <span className="tag">Bestseller</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+  </>
   );
 }
 

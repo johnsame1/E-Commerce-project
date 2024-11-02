@@ -8,7 +8,7 @@ function Home() {
   return (
     <>
        <ProductPage />
-        <Dashboard/>
+        {/* <Dashboard/> */}
         <ProductGrid/>
      </>
   );
