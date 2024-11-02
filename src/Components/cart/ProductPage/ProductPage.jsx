@@ -1,61 +1,79 @@
-import React, { useState } from "react";
-import Picture1 from "../../../assets/2024-09-13T21-19-06.411Zimage (2)777 (1).webp";
-// import Picture1 from "../../../assets/2024-09-13T21-19-06.411Zimage (2)777 (1).webp";
-// import Picture1 from "../../../assets/2024-09-13T21-19-06.411Zimage (2)777 (1).webp";
-// import Picture1 from "../../../assets/2024-09-13T21-19-06.411Zimage (2)777 (1).webp";
+
+import React, { useState, useEffect } from "react";
+import axiosInstance from '../../axios/Axios';
+import { Link, useParams } from "react-router-dom";
 import "./ProductPage.css";
-import { Link } from "react-router-dom";
+import Picture1 from "../../../assets/2024-09-13T21-19-06.411Zimage (2)777 (1).webp";
 
 function ProductPage({ addToCart }) {
+  const { id } = useParams();  
+  const [product, setProduct] = useState(null);
   const [quantity, setQuantity] = useState(1);
-  const pricePerUnit = 12.00;
 
-  const increaseQuantity = () => {
-    setQuantity(quantity + 1);
-  };
+   useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const response = await axiosInstance.get(`/product/${id}`);
+        setProduct(response.data.data);  
+      } catch (error) {
+        console.error("Error fetching product:", error);
+      }
+    };
+    fetchProduct();
+  }, [id]);
 
-  const decreaseQuantity = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
+   const increaseQuantity = () => setQuantity(quantity + 1);
+  const decreaseQuantity = () => quantity > 1 && setQuantity(quantity - 1);
+
+  
+   const handleAddToCart = async () => {
+    try {
+      const cartPayload = {
+        count: quantity,
+      };
+      const response = await axiosInstance.post(`/cart`, cartPayload , );
+      console.log("Product added to cart:", response.data);
+      addToCart(cartPayload);  
+    } catch (error) {
+      console.error("Error adding product to cart:", error);
     }
   };
 
-  const handleAddToCart = () => {
-    const product = {
-      id: 1,
-      name: 'Plastic bag for storage',
-      price: pricePerUnit,
-      quantity: quantity,
-    };
-    addToCart(product);
-  };
+   if (!product) return <p>Loading product details...</p>;
 
   return (
     <div className="product-page">
       <div className="product-gallery">
         <div className="gallery-thumbnails">
-          <img
-            className="thumbnail active"
-            src={Picture1}
-            alt="Product Thumbnail 1"
-          />
-          <img className="thumbnail" src={Picture1} alt="Product Thumbnail 2" />
-          <img className="thumbnail" src={Picture1} alt="Product 111 Thumbnail 3" />
+          {product.images && product.images.length > 0 ? (
+            product.images.map((img, index) => (
+              <img
+                key={index}
+                className="thumbnail"
+                src={img.url}
+                alt={`Product Thumbnail ${index + 1}`}
+              />
+            ))
+          ) : (
+            <img className="thumbnail" src={Picture1} alt="Default Thumbnail" />
+          )}
         </div>
       </div>
 
       <div className="product-main">
-        <img className="main-image" src={Picture1} alt="Product Main" />
+        <img
+          className="main-image"
+          src={product.images && product.images[0] ? product.images[0].url : Picture1}
+          alt="Product Main"
+        />
       </div>
 
       <div className="product-details">
-        <h1 className="product-title">Plastic bag for storage</h1>
-        <p className="product-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
+        <h1 className="product-title">{product.name}</h1>
+        <p className="product-description">{product.description}</p>
 
         <div className="availability">
-          <span>Available</span>
+          <span>{product.available ? "Available" : "Out of Stock"}</span>
         </div>
 
         <div className="quantity-controls">
@@ -65,14 +83,15 @@ function ProductPage({ addToCart }) {
         </div>
 
         <div className="product-price">
-          {(pricePerUnit * quantity).toFixed(2)} $
+          {(product.price * quantity).toFixed(2)} $
         </div>
 
         <div className="action-buttons">
           <button className="add-to-cart" onClick={handleAddToCart}>Add to Cart</button>
           <button className="add-to-favorite">Add to Favorite</button>
-         <Link to={"/Viewcart"} > <button className="view-cart">View Cart</button>
-         </Link>          
+          <Link to={"/Viewcart"}>
+            <button className="view-cart">View Cart</button>
+          </Link>
         </div>
       </div>
     </div>

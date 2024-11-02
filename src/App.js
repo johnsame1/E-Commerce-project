@@ -24,7 +24,7 @@ function App() {
         <Route path="/filteration/BestSeller" element={<FreshSale />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign" element={<Sign />} />
-        <Route path="/Cart" element={<Cart />} />
+        <Route path="/Cart/:id" element={<Cart />} />
         <Route path="/Viewcart" element={<ViewCart />} />
       </Routes>
       <Footer />

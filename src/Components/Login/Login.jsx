@@ -29,12 +29,9 @@ function Login() {
                     "Content-Type": "application/json"
                 }
             };
-
-            // Log the request data in console (visible in dev tools)
-            
+             
             const { data } = await axiosInstance.post('/auth/login', newUser, config);
-            // Store the token in local storage
-            localStorage.setItem("token", data.token);
+             localStorage.setItem("token", data.token);
             navigate("/");
         } catch (error) {
             setError('Login failed. Please check your credentials.');
