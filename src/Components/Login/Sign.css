@@ -1,12 +1,11 @@
-/* Container holding the two sections */
+
+/* Container holding the two sectiontions */
  .section .container {
     width: 100%;
-    height: 100vh;
     display: flex;
-    /* Adjust to keep a 40% - 60% split */
 }
 
-/* Left banner (Form section) */
+/* Left banner (Form sectiontion) */
 .banner_left {
     width: 40%;  /* Takes 40% of the width */
     height: 107%;
@@ -164,7 +163,7 @@ input {
     transition: 2s;
 }
 /* -------------------------------------------- */
-/* Right banner (Image section) */
+/* Right banner (Image sectiontion) */
 .banner_right {
     width: 60%;  
     position: relative;
@@ -264,7 +263,7 @@ input {
 
 @media(min-width:375px) and (max-width:424px){
 
-     .section .container{
+     .sectiontion .container{
         height: 100vh;
         width: 240%;
         /* background-color: #f1f1f1; */
@@ -301,7 +300,7 @@ input {
 }
 @media(min-width:425px) and (max-width:767px){
 
-    .section .container{
+    .sectiontion .container{
         
         height: 100vh;
         width: 240%;
@@ -365,7 +364,7 @@ input {
 /* *{
     font-size: 20px;
 } */
-.section .container{
+.sectiontion .container{
         
         height: 100vh;
         width: 250%;
@@ -438,7 +437,7 @@ font-size: 1rem;
 /* *{
     font-size: 20px;
 } */
-.section .container {max-width: 100%;}
+.sectiontion .container {max-width: 100%;}
  .container .banner_right .image-back .real{
     max-width: 100%;
 }

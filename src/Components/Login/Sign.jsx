@@ -1,23 +1,45 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle, faFacebook } from "@fortawesome/free-brands-svg-icons";
 import real from "../../images/real-img.jpg"; // Path to your image
 import "./Sign.css";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import axiosInstance from '../axios/Axios.js'
+
 
 function Sign() {
+  const navigate = useNavigate(); // Initialize useNavigate
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const newUser = {username: name, email, password, passwordConfirm:confirmPassword };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
+    
+    if(!name || !email || !password || !confirmPassword){
+            return alert("Please enter all fields")
+    }
 
-    const newUser = { name, email, password, confirmPassword };
-    const existingUsers = JSON.parse(localStorage.getItem("users")) || [];
-    existingUsers.push(newUser);
-    localStorage.setItem("users", JSON.stringify(existingUsers));
+    try {
+     
+      const config = {
+        headers: {
+           "Content-Type": "application/json",
+          
+        }
+      }
+      const { data } = await axiosInstance.post('/auth/register' , newUser ,config );
+      
+      
+      
+      localStorage.setItem("token", JSON.stringify(data.token));
+   navigate("/")
+    } catch (error) {
+      console.error("Error registering user: ", error);
+    }
 
     setName("");
     setEmail("");
@@ -27,8 +49,15 @@ function Sign() {
     console.log("Form submitted and user data saved to local storage");
   };
 
+ 
+
+
+
+
   return (
-    <div className="section">
+    <div className='section'>
+      
+  
       <div className="container">
         <div className="banner_left">
           <div className="title-banner_left">
@@ -115,7 +144,7 @@ function Sign() {
           </div>
         </div>
       </div>
-    </div>
+      </div>
   );
 }
 

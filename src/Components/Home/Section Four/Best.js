@@ -35,7 +35,7 @@ function Best({filter , title}) {
                 {bestSeller.map((info) => {
                     return (      
                         <>
-                            <Link to={"/Cart"}>
+                            <Link to={`/Cart/${info.id}`}>
                                 <div className="card" key={info.id}>
                                     <img src={info.image[0].url} alt='/' />
                                     <div className="card-data">
