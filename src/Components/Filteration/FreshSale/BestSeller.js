@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import "../categories/categories.css";
 import axiosInstance from "../../axios/Axios";
+import { Link } from "react-router-dom";
 function BestSeller({ filter }) {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -52,9 +53,9 @@ function BestSeller({ filter }) {
       <div className="containers">
         <div className="NewCategory">
           <h1>BestSeller</h1>
-          <button onClick={toggleShowAll}>
+          <Link to={"/filteration/NewSeller"} onClick={toggleShowAll} >
             {showAll ? "Show Less" : "Show All Products"}
-          </button>
+          </Link>
         </div>
         <div className="row">
           {filteredProducts.slice(0 , showAll ? filteredProducts.length:3).map((product) => (

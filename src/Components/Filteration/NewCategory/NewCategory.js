@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "../categories/categories.css";
 import axiosInstance from "../../axios/Axios";
+import { Link } from "react-router-dom";
 function NewCategory({ filter }) {
   const [products, setProducts] = useState([]);
-  const [showAll, setShowAll] = useState(true);
+  const [showAll, setShowAll] = useState(false);
   const [filteredProducts, setFilteredProducts] = useState([]);
   
  
@@ -44,9 +45,9 @@ const getProducts = async()=>{
       <div className="containers">
         <div className="NewCategory">
           <h1>New Arrived</h1>
-          <button onClick={toggleShowAll}>
+          <Link to={"/filteration/NewSeller"} onClick={toggleShowAll}>
             {showAll ? "Show Less" : "Show All Products"}
-          </button>
+          </Link>
         </div>
         <div className="row">
           {filteredProducts.slice(0 , showAll ? filteredProducts.length:3)
