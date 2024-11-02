@@ -46,7 +46,7 @@ function Login() {
         <div className="containerr">
             <div className="banner_left">
                 <div className="title-banner_left">
-                    <h2>Log in to Your account</h2>
+                    <h2>Log in tomhbfj Your account</h2>
                     <h4>Welcome! Select a method to log in</h4>
                 </div>
                 <div className="box">
