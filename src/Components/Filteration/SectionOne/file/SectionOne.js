@@ -3,16 +3,18 @@ import "./sectionOne.css";
 import image from "../assyts/img/bag.png";
 import axiosInstance from "../../../axios/Axios"; 
 import { Link } from "react-router-dom";
+import { ChatState } from "../../../Context/ChatProvider";
 
 function SectionOne({ setFilter }) {
   const [categories, setCategories] = useState([]);
-
+ const {user} = ChatState()
+ console.log("sect1" , user)
   const getCategories = async () => {
     try {
       const config = { headers: {
         Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2OGM4ZDNhZTQ0YmQ1YjAzZTFmNzFjYyIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyOTc2Njg5MX0.SSXQMQM0vdzDnr2f7M7EtIRuEhNbfdLRMh2Sux37N5U`
       }}
-      const { data } = await axiosInstance.get("/category",config); 
+      const { data } = await axiosInstance.get("/category" ,config); 
       setCategories(data.data.categories);
        console.log(data.data.categories); 
       console.log("cat", data.data.categories );

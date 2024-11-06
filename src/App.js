@@ -11,10 +11,12 @@ import Navbar from "./Components/NavBar/Navbar";
 import ViewCart from "./Pages/ViewCart";
 import Footer from "./Components/Footer/Footer";
 import Login from "./Components/Login/Login";
+import ChatProvider from "./Components/Context/ChatProvider";
 
 function App() {
   return (
     <Router>
+      <ChatProvider>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -22,12 +24,14 @@ function App() {
         <Route path="/filteration/NewSeller" element={<NewCategory />} />
         <Route path="/filteration/Onsale" element={<OnSale />} />
         <Route path="/filteration/BestSeller" element={<FreshSale />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/sign" element={<Sign />} />
-        <Route path="/Cart" element={<Cart />} />
+        <Route path="/loginn" element={<Login />} />
+        <Route path="/Sign" element={<Sign />} />
+        <Route path="/Cart/:id        " element={<Cart />} />
         <Route path="/Viewcart" element={<ViewCart />} />
       </Routes>
       <Footer />
+      
+      </ChatProvider>
     </Router>
   );
 }
